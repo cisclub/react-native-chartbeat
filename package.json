@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "postinstall": "git clone https://github.com/cisclub/react-native-chartbeat.git | cp -a react-native-chartbeat/ios/Chartbeat.framework ./ios",
+    "postinstall": "git clone https://github.com/cisclub/react-native-chartbeat.git | cp -aT react-native-chartbeat/ios/Chartbeat.framework ./ios",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
