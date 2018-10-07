@@ -1,5 +1,6 @@
-
 # react-native-chartbeat-cs
+
+# Work in progress. Not for production use
 
 ## Getting started
 
