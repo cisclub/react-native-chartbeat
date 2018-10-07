@@ -1,10 +1,14 @@
 {
   "name": "react-native-chartbeat-cs",
   "version": "1.0.3",
-  "description": "",
+  "description": "Work in progress. Not for production use. React Native wrapper for Chartbeat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cisclub/react-native-chartbeat"
+  },
   "main": "index.js",
   "scripts": {
-    "postinstall": "git clone https://github.com/chartbeat-labs/chartbeat-ios-sdk.git",
+    "postinstall": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
