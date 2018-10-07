@@ -1,0 +1,20 @@
+{
+  "name": "react-native-chartbeat-cs",
+  "version": "1.0.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "git clone https://github.com/chartbeat-labs/chartbeat-ios-sdk.git",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "chartbeat"
+  ],
+  "author": "cisclub",
+  "license": "",
+  "peerDependencies": {
+    "react-native": "^0.41.2",
+    "react-native-windows": "0.41.0-rc.1"
+  }
+}
