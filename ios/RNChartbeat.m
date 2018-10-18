@@ -27,8 +27,9 @@ RCT_EXPORT_METHOD(setSections:(NSArray *)sections) {
     [[CBTracker sharedTracker] setSections:sections];
 }
 
-RCT_EXPORT_METHOD(trackView:(id)view viewId:(NSString *)viewId title:(NSString *)title) {
-    [[CBTracker sharedTracker] trackView:view
+RCT_EXPORT_METHOD(trackViewWithId:(NSString *)viewId title:(NSString *)title) {
+    UIView *rootView = [UIApplication sharedApplication].keyWindow.rootViewController.view;
+    [[CBTracker sharedTracker] trackView:rootView
                                   viewId:viewId
                                    title:title];
 }
