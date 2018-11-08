@@ -5,6 +5,8 @@
 ## Getting started
 
 `$ npm install react-native-chartbeat-cs --save`
+or
+`$ yarn add react-native-chartbeat-cs`
 
 ### Important
 
@@ -16,7 +18,6 @@ After running `npm install` and linking the library. You need to link the native
 
 ### Manual installation
 
-
 #### iOS
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
@@ -27,23 +28,51 @@ After running `npm install` and linking the library. You need to link the native
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.reactlibrary.RNChartbeatPackage;` to the imports at the top of the file
-  - Add `new RNChartbeatPackage()` to the list returned by the `getPackages()` method
+
+- Add `import com.shukerullah.chartbeat.RNChartbeatPackage;` to the imports at the top of the file
+- Add `new RNChartbeatPackage()` to the list returned by the `getPackages()` method
+
 2. Append the following lines to `android/settings.gradle`:
-  	```
-  	include ':react-native-chartbeat-cs'
-  	project(':react-native-chartbeat-cs').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-chartbeat-cs/android')
-  	```
+   ```
+   include ':react-native-chartbeat-cs'
+   project(':react-native-chartbeat-cs').projectDir = new File(rootProject.projectDir, 	'../node_modules/react-native-chartbeat-cs/android')
+   ```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
-  	```
-      compile project(':react-native-chartbeat-cs')
-  	```
+   ```
+     compile project(':react-native-chartbeat-cs')
+   ```
 
 ## Usage
-```javascript
-import RNChartbeat from 'react-native-chartbeat-cs';
 
-// TODO: What to do with the module?
-RNChartbeat;
+```javascript
+import { Platform } from "react-native";
+import Chartbeat from "react-native-chartbeat-cs";
+
+function setupTracker(accountId: string, domain: string) {
+  if (Platform.OS === "ios") {
+    Chartbeat.setupTrackerWithAccountId(accountId, domain);
+  } else {
+    Chartbeat.setupTracker(accountId, domain);
+  }
+}
+
+function trackView(viewId: string, viewTitle: string) {
+  if (Platform.OS === "ios") {
+    Chartbeat.trackViewWithId(viewId, viewTitle);
+  } else {
+    Chartbeat.trackView(viewId, viewTitle);
+  }
+}
+
+function setSections(sections: Array<string>) {
+  Chartbeat.setSections(sections);
+}
+
+function setAuthors(authors: Array<string>) {
+  Chartbeat.setAuthors(authors);
+}
+
+function stopTracker() {
+  Chartbeat.stopTracker();
+}
 ```
-  

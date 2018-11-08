@@ -1,6 +1,6 @@
 {
   "name": "react-native-chartbeat-cs",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Work in progress. Not for production use. React Native wrapper for Chartbeat",
   "repository": {
     "type": "git",
@@ -16,9 +16,5 @@
     "chartbeat"
   ],
   "author": "cisclub",
-  "license": "",
-  "peerDependencies": {
-    "react-native": "^0.41.2",
-    "react-native-windows": "0.41.0-rc.1"
-  }
+  "license": ""
 }
