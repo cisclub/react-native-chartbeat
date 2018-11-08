@@ -1,22 +1,23 @@
 
 package com.shukerullah.chartbeat;
 
+import android.content.Context;
+
 import com.chartbeat.androidsdk.Tracker;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 
-import java.util.Collection;
 
 public class RNChartbeatModule extends ReactContextBaseJavaModule {
 
   public final String REACT_CLASS = "RNChartbeat";
 
-  private final ReactApplicationContext reactContext;
+  private final Context context;
 
   public RNChartbeatModule(ReactApplicationContext reactContext) {
     super(reactContext);
-    this.reactContext = reactContext;
+    context = reactContext.getApplicationContext();
   }
 
   @Override
@@ -36,12 +37,12 @@ public class RNChartbeatModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void setupTracker(String accountId, String domain) {
-    Tracker.setupTracker(accountId, domain, reactContext);
+    Tracker.setupTracker(accountId, domain, context);
   }
 
   @ReactMethod
   public void restartPingService() {
-    Tracker.restartPingService(reactContext);
+    Tracker.restartPingService(context);
   }
 
   /**
@@ -100,7 +101,7 @@ public class RNChartbeatModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void trackView(String viewId, String viewTitle) {
-    Tracker.trackView(reactContext, viewId, viewTitle);
+    Tracker.trackView(context, viewId, viewTitle);
   }
 
   /**
@@ -139,17 +140,17 @@ public class RNChartbeatModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void setZones(Collection<String> zones) {
+  public void setZones(String zones) {
     Tracker.setZones(zones);
   }
 
   @ReactMethod
-  public void setAuthors(Collection<String> authors) {
+  public void setAuthors(String authors) {
     Tracker.setAuthors(authors);
   }
 
   @ReactMethod
-  public void setSections(Collection<String> sections) {
+  public void setSections(String sections) {
     Tracker.setSections(sections);
   }
 

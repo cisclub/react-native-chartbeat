@@ -48,11 +48,11 @@ After running `npm install` and linking the library. You need to link the native
 import { Platform } from "react-native";
 import Chartbeat from "react-native-chartbeat-cs";
 
-function setupTracker(accountId: string, domain: string) {
+function setupTracker(accountId: number, domain: string) {
   if (Platform.OS === "ios") {
     Chartbeat.setupTrackerWithAccountId(accountId, domain);
   } else {
-    Chartbeat.setupTracker(accountId, domain);
+    Chartbeat.setupTracker(accountId.toString(), domain);
   }
 }
 
@@ -65,11 +65,19 @@ function trackView(viewId: string, viewTitle: string) {
 }
 
 function setSections(sections: Array<string>) {
-  Chartbeat.setSections(sections);
+  if (Platform.OS === "ios") {
+    Chartbeat.setSections(sections);
+  } else {
+    Chartbeat.setSections(sections.join());
+  }
 }
 
 function setAuthors(authors: Array<string>) {
-  Chartbeat.setAuthors(authors);
+  if (Platform.OS === "ios") {
+    Chartbeat.setAuthors(authors);
+  } else {
+    Chartbeat.setAuthors(authors.join());
+  }
 }
 
 function stopTracker() {
