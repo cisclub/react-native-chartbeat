@@ -78,7 +78,11 @@ extern NSString * const kCBVideoThumbnailKey;
 engagedSecondsSinceLastPing:(uint)engagedSecondsSinceLastPing
     pingEndpointVersion:(uint)pingEndpointVersion
 mediaPlayerTracker:(MediaPlayerTracker *) mediaPlayerTracker
-                 sdkVersion:(NSString *)sdkVersion
+    sdkVersion:(NSString *)sdkVersion
+    siteVisitDepth:(long)siteVisitDepth
+    siteVisitReferrer:(NSString *)siteVisitReferrer
+    siteVisitUid:(NSString *)siteVisitUid
+    subscriptionState:(NSString *)subscriptionState
     extraParams:(NSDictionary *)extraParams
   previousSessionToken:(NSString *)previousSessionToken;
 
