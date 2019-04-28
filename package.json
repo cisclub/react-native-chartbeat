@@ -18,7 +18,6 @@
   "author": "cisclub, shukerullah",
   "license": "",
   "peerDependencies": {
-    "react-native": ">=0.41.2",
-    "react-native-windows": "^0.58"
+    "react-native": ">=0.41.2"
   }
 }
