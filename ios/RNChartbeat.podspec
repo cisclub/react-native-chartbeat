@@ -4,9 +4,9 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "RNChartbeat"
   s.description  = <<-DESC
-                  RNChartbeat
+                  React Native Cahrtbeat
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/cisclub/react-native-chartbeat#readme"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
