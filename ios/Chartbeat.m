@@ -1,7 +1,7 @@
 #import "Chartbeat.h"
 #import "CBTracker.h"
 
-@implementation RNChartbeat
+@implementation Chartbeat
 
 - (dispatch_queue_t)methodQueue
 {
