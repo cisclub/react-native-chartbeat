@@ -1,5 +1,4 @@
-
-#import "RNChartbeat.h"
+#import "Chartbeat.h"
 #import "CBTracker.h"
 
 @implementation RNChartbeat
@@ -8,6 +7,7 @@
 {
     return dispatch_get_main_queue();
 }
+
 RCT_EXPORT_MODULE()
 
 RCT_EXPORT_METHOD(setupTrackerWithAccountId:(int)uid domain:(NSString *)domain) {
@@ -35,4 +35,3 @@ RCT_EXPORT_METHOD(trackViewWithId:(NSString *)viewId title:(NSString *)title) {
 }
 
 @end
-  

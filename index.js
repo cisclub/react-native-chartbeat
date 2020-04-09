@@ -1,6 +1,5 @@
-
 import { NativeModules } from 'react-native';
 
-const { RNChartbeat } = NativeModules;
+const { Chartbeat } = NativeModules;
 
-export default RNChartbeat;
+export default Chartbeat;

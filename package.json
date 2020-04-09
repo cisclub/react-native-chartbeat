@@ -1,23 +1,34 @@
 {
   "name": "react-native-chartbeat-cs",
+  "title": "React Native Chartbeat",
   "version": "4.3.3",
-  "description": "Work in progress. Not for production use. React Native wrapper for Chartbeat",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/cisclub/react-native-chartbeat"
-  },
+  "description": "Chartbeat native module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cisclub/react-native-chartbeat.git",
+    "baseUrl": "https://github.com/cisclub/react-native-chartbeat"
   },
   "keywords": [
     "react-native",
     "chartbeat"
   ],
-  "author": "cisclub, shukerullah",
-  "license": "",
+  "author": {
+    "name": "cisclub, shukerullah",
+    "email": "yourname@email.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
   "peerDependencies": {
-    "react-native": "^0.41.2",
-    "react-native-windows": "0.41.0-rc.1"
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0-rc.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
   }
 }
