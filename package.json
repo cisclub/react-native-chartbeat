@@ -1,7 +1,7 @@
 {
   "name": "react-native-chartbeat-cs",
   "title": "React Native Chartbeat",
-  "version": "4.3.3",
+  "version": "5.0.0",
   "description": "Chartbeat native module",
   "main": "index.js",
   "scripts": {
