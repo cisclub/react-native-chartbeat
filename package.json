@@ -1,6 +1,6 @@
 {
   "name": "react-native-chartbeat-cs",
-  "version": "4.3.2",
+  "version": "4.3.3",
   "description": "Work in progress. Not for production use. React Native wrapper for Chartbeat",
   "repository": {
     "type": "git",
