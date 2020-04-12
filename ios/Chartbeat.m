@@ -13,6 +13,7 @@ RCT_EXPORT_MODULE()
 RCT_EXPORT_METHOD(setupTrackerWithAccountId:(int)uid domain:(NSString *)domain) {
     [[CBTracker sharedTracker] setupTrackerWithAccountId:uid
                                                   domain:domain];
+    [[CBTracker sharedTracker] setSubDomain:domain];
 }
 
 RCT_EXPORT_METHOD(stopTracker) {
