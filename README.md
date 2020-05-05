@@ -4,9 +4,17 @@
 
 ## Getting started
 
-`$ npm install react-native-chartbeat-cs --save`
-or
-`$ yarn add react-native-chartbeat-cs`
+```
+yarn add react-native-chartbeat-cs
+react-native link react-native-chartbeat-cs # not needed for react-native >= 0.60.0
+```
+
+or if you're using npm
+
+```
+npm install react-native-chartbeat-cs --save
+react-native link react-native-chartbeat-cs # not needed for react-native >= 0.60.0
+```
 
 ### Important
 
@@ -29,8 +37,8 @@ After running `npm install` and linking the library. You need to link the native
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 
-- Add `import com.shukerullah.chartbeat.RNChartbeatPackage;` to the imports at the top of the file
-- Add `new RNChartbeatPackage()` to the list returned by the `getPackages()` method
+- Add `import com.reactnative.chartbeat.ChartbeatPackage;` to the imports at the top of the file
+- Add `new ChartbeatPackage()` to the list returned by the `getPackages()` method
 
 2. Append the following lines to `android/settings.gradle`:
    ```
